@@ -9,7 +9,13 @@ const app = express();
 const PORT = 5000;
 
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ['https://your-vercel-frontend-url.vercel.app'],
+    method: ["POST", "GET"],
+    credential: true
+  }
+));
 app.use(bodyParser.json());
 app.use("/auth",authentication);
 app.use("/task",taskmanagement);
