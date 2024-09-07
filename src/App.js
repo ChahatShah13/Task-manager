@@ -9,10 +9,6 @@ import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 const App = () => {
-  
-  fetch('https://https://task-manager-roan-chi.vercel.app/api/endpoint')
-  .then(response => response.json())
-  .then(data => console.log(data));
 
   const [tasks, setTasks] = useState([]);
 
